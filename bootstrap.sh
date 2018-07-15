@@ -27,14 +27,14 @@ source venv/bin/activate
 echo "Install Docker"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
-sudo add-apt-repository \
+add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 
-sudo apt-get install docker-ce
+apt-get install docker-ce
 
- sodu docker build -t mydevopsloft .
+docker build -t mydevopsloft .
 docker run -d -p 80:5000 mydevopsloft:latest
 
 curl http://0.0.0.0
