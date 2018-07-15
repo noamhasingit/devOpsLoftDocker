@@ -18,9 +18,6 @@ import csv
 # import system paths
 import config  # noqa: F401
 import models
-
-
-
 from flask import Flask, flash, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import exc
