@@ -34,7 +34,7 @@ add-apt-repository \
    stable" > /dev/null 
 
 apt-get install -y docker-ce
-
+cd /vagrant
 docker build -t mydevopsloft .
 docker run -d -p 80:5000 mydevopsloft:latest
 
