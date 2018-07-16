@@ -1,13 +1,6 @@
-import unittest 
+import unittest
 import csv
 import config  # noqa: F401
-import models
-from flask import Flask, flash, render_template, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import exc
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, login_user, login_required, \
-    logout_user, current_user
 
 
 class TestDbExist(unittest.TestCase):
@@ -26,15 +19,11 @@ class TestDbExist(unittest.TestCase):
                     'email': email,
                     'expertise': expertise
                 })
-                
-            # inFile.close()
-
-            spamReader = csv.reader(open('data/mailingList.csv'), delimiter=',')
-            # inFile.close()
-            for row in spamReader:
+            Reader = csv.reader(open('data/mailingList.csv'), delimiter=',')
+            for row in Reader:
                 print(row)
-           
             inFile.close()
+
 
 if __name__ == "__main__":
     unittest.main()
